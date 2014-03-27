@@ -10,6 +10,12 @@
     <height>332</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="windowTitle">
    <string>Database Kontak BBM</string>
   </property>
@@ -18,151 +24,9 @@
     <normaloff>../../../../../../Program Files (x86)/Mountain Lion Skin Pack/RocketDock/Icons/Address Book.png</normaloff>../../../../../../Program Files (x86)/Mountain Lion Skin Pack/RocketDock/Icons/Address Book.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QRadioButton" name="radioMale">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>80</y>
-      <width>82</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Laki-Laki</string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radioFemale">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>100</y>
-      <width>82</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Perempuan</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="resetButton">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>50</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Reset</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="simpanButton">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>20</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Simpan</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="pinEdit">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>20</y>
-      <width>141</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string/>
-    </property>
-    <property name="statusTip">
-     <string>hkjh</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="placeholderText">
-     <string>Masukkan PIN...</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="nameEdit">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>50</y>
-      <width>141</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="placeholderText">
-     <string>Masukkan Nama...</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>220</y>
-      <width>361</width>
-      <height>81</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="pin">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>71</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PIN :</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="nama">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>50</y>
-      <width>46</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Nama :</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="jenisKelamin">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>80</y>
-      <width>71</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Jenis Kelamin :</string>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox">
+   <widget class="QGroupBox" name="viewGroup">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -172,17 +36,33 @@
       <height>111</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="title">
      <string>Data Kontak BBM</string>
     </property>
+    <widget class="QTextBrowser" name="dataViewer">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>361</width>
+       <height>81</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox_3">
+   <widget class="QGroupBox" name="deleteGroup">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>120</y>
+      <y>129</y>
       <width>381</width>
-      <height>80</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="title">
@@ -257,35 +137,154 @@
      </item>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
+   <widget class="QGroupBox" name="inputGroup">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>0</y>
       <width>381</width>
-      <height>121</height>
+      <height>131</height>
      </rect>
     </property>
     <property name="title">
      <string>Input Data</string>
     </property>
+    <widget class="QPushButton" name="simpanButton">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>20</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Simpan</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="nameEdit">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>50</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Masukkan Nama...</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioFemale">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>100</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Perempuan</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="pinEdit">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>20</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="statusTip">
+      <string>hkjh</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Masukkan PIN...</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="nama">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>46</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nama :</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioMale">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>80</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Laki-Laki</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pin">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>PIN :</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="resetButton">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>50</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="jenisKelamin">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Jenis Kelamin :</string>
+     </property>
+    </widget>
    </widget>
-   <zorder>groupBox_2</zorder>
-   <zorder>groupBox_3</zorder>
-   <zorder>groupBox</zorder>
-   <zorder>radioMale</zorder>
-   <zorder>radioFemale</zorder>
-   <zorder>resetButton</zorder>
-   <zorder>simpanButton</zorder>
-   <zorder>pinEdit</zorder>
-   <zorder>nameEdit</zorder>
-   <zorder>textBrowser</zorder>
-   <zorder>pin</zorder>
-   <zorder>nama</zorder>
-   <zorder>jenisKelamin</zorder>
+   <zorder>deleteGroup</zorder>
+   <zorder>viewGroup</zorder>
+   <zorder>inputGroup</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

@@ -21,7 +21,8 @@ tampilan::tampilan(QWidget *parent) :
     QTextStream in(&kontak);
 
     ui->setupUi(this);
-    ui->textBrowser->setText(in.readAll());
+    setFixedSize(this->geometry().width(),this->geometry().height());
+    ui->dataViewer->setText(in.readAll());
     kontak.close();
 }
 
@@ -33,7 +34,7 @@ tampilan::~tampilan()
 /* I.S. : Field telah terisi semua atau sebagian
  * F.S. : Mengisikan nilai pada field ke text file jika memenuhi syarat*/
 
-void tampilan::on_simpan_clicked()
+void tampilan::on_simpanButton_clicked()
 {
     //Mengambil data pada pinEdit & nameEdit
     QString pinData, nameData;
@@ -84,14 +85,14 @@ void tampilan::on_simpan_clicked()
     //memuat ulang file kontak.txt
     kontak.open(QIODevice::ReadOnly);
     QTextStream in(&kontak);
-    ui->textBrowser->setText(in.readAll());
+    ui->dataViewer->setText(in.readAll());
     kontak.close();
 }
 
 /* I.S. : Field telah terisi semua atau sebagian
  * F.S. : Mengembalikan nilai field pada kondisi clear*/
 
-void tampilan::on_reset_clicked()
+void tampilan::on_resetButton_clicked()
 {
     ui->pinEdit->clear();
     ui->nameEdit->clear();

@@ -20,8 +20,8 @@ public:
     ~tampilan();
 
 private slots:
-    void on_simpan_clicked();
-    void on_reset_clicked();
+    void on_simpanButton_clicked();
+    void on_resetButton_clicked();
     void on_cariButton_clicked();
 
 private:
